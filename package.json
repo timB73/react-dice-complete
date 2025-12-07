@@ -25,7 +25,7 @@
   "typings": "dist/ReactDice.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AdamTyler/react-dice-complete.git"
+    "url": "git+https://github.com/timB73/react-dice-complete.git"
   },
   "author": "Adam Tyler <adam.tyler@utexas.edu> (http://adam-tyler.com)",
   "keywords": [
