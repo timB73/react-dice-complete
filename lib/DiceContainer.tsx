@@ -42,11 +42,11 @@ const DiceContainer = forwardRef<DieContainerRef, DiceContainerProps>(
     }
 
     const onRollDone = () => {
-      setRollCount((count) => count - 1)
+      setRollCount((count) => count + 1)
     }
 
     useEffect(() => {
-      if (rollCount <= 0) {
+      if (rollCount > 0) {
         setTimeout(getRollResults, 100)
       }
     }, [rollCount])
@@ -65,10 +65,6 @@ const DiceContainer = forwardRef<DieContainerRef, DiceContainerProps>(
       setDiceValues(newDiceValues)
       totalCb(newTotalValue, newDiceValues)
     }
-
-    useEffect(() => {
-      getRollResults()
-    }, [numDice])
 
     const getDice = useMemo(() => {
       let dice: JSX.Element[] = []
