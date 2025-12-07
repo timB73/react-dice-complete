@@ -1,0 +1,32 @@
+# Source files
+lib/
+src/
+config/
+*.ts
+*.tsx
+*.js
+!dist/*.js
+
+# Development files
+index.html
+dev-entry.js
+docs/
+img/
+node_modules/
+*.map
+
+# Config files
+tsconfig.json
+webpack.config.*
+postcss.config.js
+
+# Git
+.git/
+.gitignore
+
+# Other
+README.md
+LICENSE
+*.log
+.DS_Store
+
