@@ -19,6 +19,7 @@
     "build": "webpack --config config/webpack.config.prod.js",
     "test": "echo \"No test specified\" && exit 0",
     "prepare": "npm run build",
+    "postinstall": "npm run build",
     "docs": "webpack --config config/webpack.config.docs.js"
   },
   "typings": "dist/ReactDice.d.ts",
