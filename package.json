@@ -3,6 +3,14 @@
   "version": "2.2.0",
   "description": "Create dice for any game and roll for totals. Complete UI and Logic",
   "main": "dist/react-dice-complete.js",
+  "types": "dist/ReactDice.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/react-dice-complete.js",
+      "require": "./dist/react-dice-complete.js",
+      "types": "./dist/ReactDice.d.ts"
+    }
+  },
   "files": [
     "dist"
   ],
