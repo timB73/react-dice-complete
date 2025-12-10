@@ -20,7 +20,7 @@ export interface DiceContainerProps extends Omit<DieProps, 'onRollDone'> {
 }
 
 const DiceContainer = forwardRef<DieContainerRef, DiceContainerProps>(
-  ({ numDice, totalCb, ...rest }, ref): JSX.Element => {
+  ({ numDice, totalCb, ...rest }, ref) => {
     const diceRefs = useRef<Array<DieRef | null>>([])
     const [totalValue, setTotalValue] = useState(numDice * 6)
     const [diceValues, setDiceValues] = useState<number[]>([])
@@ -67,14 +67,16 @@ const DiceContainer = forwardRef<DieContainerRef, DiceContainerProps>(
     }
 
     const getDice = useMemo(() => {
-      let dice: JSX.Element[] = []
+      let dice: React.ReactElement[] = []
       for (let i = 0; i < numDice; i++) {
         dice.push(
           <Die
             {...rest}
             key={i}
             onRollDone={onRollDone}
-            ref={(die) => (diceRefs.current[i] = die)}
+            ref={(die) => {
+              diceRefs.current[i] = die
+            }}
           />
         )
       }

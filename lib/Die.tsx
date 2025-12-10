@@ -39,7 +39,7 @@ const Die = forwardRef<DieRef, DieProps>(
       sides = 6,
     }: DieProps,
     ref
-  ): JSX.Element => {
+  ) => {
     const dieRef = useRef<HTMLDivElement>(null)
 
     useImperativeHandle(ref, () => ({
