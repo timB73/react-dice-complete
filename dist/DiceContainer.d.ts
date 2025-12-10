@@ -8,5 +8,5 @@ export interface DiceContainerProps extends Omit<DieProps, 'onRollDone'> {
     numDice: number;
     totalCb: (newTotalValue: number, newDiceValues: number[]) => void;
 }
-declare const _default: React.MemoExoticComponent<React.ForwardRefExoticComponent<DiceContainerProps & React.RefAttributes<DieContainerRef>>>;
+declare const _default: React.NamedExoticComponent<DiceContainerProps & React.RefAttributes<DieContainerRef>>;
 export default _default;
